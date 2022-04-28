@@ -24,7 +24,7 @@ a:focus,
 .navbar-inverse .navbar-nav .nav-link.active,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .open > .nav-link {
-    color: #3197d6 !important;
+    color: #686868 !important;
 }
 
 .dmtop,
@@ -32,7 +32,7 @@ a:focus,
 .search-form .btn:focus,
 .search-form .btn {
     color: #ffffff !important;
-    background-color: #3197d6 !important;
+    background-color: #5e6060 !important;
 }
 
 .tag-cloud-single span,
@@ -42,15 +42,15 @@ a:focus,
 .btn:focus,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    background-color: #3197d6;
+    background-color: #555656;
 }
 
 .blockquote {
-    border-left-color: #3197d6;
+    border-left-color: #454545;
 }
 
 .footer .widget-title {
-    border-color: #3197d6;
+    border-color: #4f4f4f;
 }
 
 

@@ -72,10 +72,9 @@ h5 {
     width: 50%;
 }
 
-.last-slot,
 .second-slot {
     float: left;
-    width: 25%;
+    width: 50%;
 }
 
 .first-slot .blog-meta h4 {
@@ -197,8 +196,8 @@ h5 {
 }
 
 .footer {
-    background-color: #000000;
-    background-image: none;
+    background-color: rgb(33, 33, 33);
+    background-image: url(/images/footer.png);
 }
 
 .footer .widget-title {
@@ -278,14 +277,14 @@ a:focus {
 .btn:hover,
 .btn:focus {
     color: #ffffff !important;
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 95, 2, 0.277) 0px, rgb(255, 73, 4) 100%) repeat scroll 0 0 !important
 }
 
 .tag-cloud-single span,
 .navbar-inverse {
     color: #ffffff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #272828 0px, #b6b8b8 100%) repeat scroll 0 0 !important
 }
 
 .gp-button.btn-primary:hover,
