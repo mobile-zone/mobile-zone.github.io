@@ -44,6 +44,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -73,6 +87,9 @@
                                 <a class="nav-link" href="tech-contact.html">Contactez-nous</a>
                             </li>
                         </ul>
+                        <ul class="navbar-nav mr-2">
+                            <button onclick="myFunction()"><small>Dark/Light Mode</small></button>
+                        </ul>
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
@@ -82,15 +99,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <h2><i class="fa fa-play bg-orange"></i> Vidéos <small class="hidden-xs-down hidden-sm-down"></small></h2>
+                        <h2><i class="fa fa-play"></i> Vidéos <small class="hidden-xs-down hidden-sm-down"></small></h2>
                     </div><!-- end col -->
                     <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                                <li class="breadcrumb-item active">Vidéos</li>
+                            </ol>
                     </div><!-- end col -->                    
                 </div><!-- end row -->
             </div><!-- end container -->
         </div><!-- end page-title -->
 
-        <section class="section">
+        <section class="section" id="interrupteur-1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -124,7 +145,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="widget">
                             <div class="footer-text text-left">
                                 <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
@@ -145,7 +166,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br>
-                        <div class="copyright">&copy; blogTechnologie.</div>
+                        <div class="copyright" style="color: white">&copy; <small>blogTechnologie.</small></div>
                     </div>
                 </div>
             </div><!-- end container -->
@@ -161,6 +182,17 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            var section = document.querySelector("#interrupteur-1");
+            var h2= document.querySelector("#interrupteur-2");
+            var h4= document.querySelector("#interrupteur-3");
+            element.classList.toggle("dark-mode");
+            section.classList.toggle("dark-mode");
+            h2.classList.toggle("dark-mode");
+            h4.classList.toggle("dark-mode");
+         }</script>
 
 </body>
 </html>

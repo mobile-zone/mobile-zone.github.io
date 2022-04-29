@@ -44,6 +44,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -73,6 +87,9 @@
                                 <a class="nav-link" href="tech-contact.html">Contactez-nous</a>
                             </li>
                         </ul>
+                        <ul class="navbar-nav mr-2">
+                            <button onclick="myFunction()"><small>Dark/Light Mode</small></button>
+                        </ul>
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
@@ -82,16 +99,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <h2><i class="fa fa-star bg-orange"></i> Micrologiciel <small class="hidden-xs-down hidden-sm-down"></small></h2>
+                        <h2><i class="fa fa-gear"></i> Micrologiciel <small class="hidden-xs-down hidden-sm-down"></small></h2>
                     </div><!-- end col -->
                     <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
-                    
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                                <li class="breadcrumb-item active">Micrologiciel</li>
+                            </ol>
                     </div><!-- end col -->                    
                 </div><!-- end row -->
             </div><!-- end container -->
         </div><!-- end page-title -->
 
-        <section class="section">
+        <section class="section" id="interrupteur-1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -100,7 +120,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="tech-single.html" title="">
+                                            <a href="Le-Galaxy-A52.html" title="">
                                                 <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
@@ -108,11 +128,11 @@
                                     </div><!-- end col -->
 
                                     <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="tech-single.html" title="">Top 10 phone applications and 2017 mobile design awards</a></h4>
-                                        <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
-                                        <small><a href="tech-single.html" title="">21 July, 2017</a></small>
-                                        <small><a href="tech-author.html" title="">by Matilda</a></small>
+                                        <h4><a href="Le-Galaxy-A52.html" title="">Le Galaxy A52 commence à recevoir la mise à jour de sécurité d'avril 2022 en Europe</a></h4>
+                                        <p>Samsung a publié la mise à jour de sécurité d'avril 2022 sur divers smartphones et tablettes Galaxy au cours des dernières semaines. Après les téléphones haut...</p>
+                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-03.html" title="">Micrologiciel</a></small>
+                                        <small>27 avril 2022</small>
+                                        <small>par Asif Shaik</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
             </div><!-- end container -->
@@ -121,7 +141,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="widget">
                             <div class="footer-text text-left">
                                 <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
@@ -142,7 +162,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br>
-                        <div class="copyright">&copy; blogTechnologie.</div>
+                        <div class="copyright" style="color: white">&copy; <small>blogTechnologie.</small></div>
                     </div>
                 </div>
             </div><!-- end container -->
@@ -158,6 +178,17 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            var section = document.querySelector("#interrupteur-1");
+            var h2= document.querySelector("#interrupteur-2");
+            var h4= document.querySelector("#interrupteur-3");
+            element.classList.toggle("dark-mode");
+            section.classList.toggle("dark-mode");
+            h2.classList.toggle("dark-mode");
+            h4.classList.toggle("dark-mode");
+         }</script>
 
 </body>
 </html>

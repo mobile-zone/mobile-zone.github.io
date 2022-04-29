@@ -44,6 +44,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -72,6 +86,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="tech-contact.html">Contactez-nous</a>
                             </li>
+                        </ul>
+                        <ul class="navbar-nav mr-2">
+                            <button onclick="myFunction()"><small><i class="fa fa-gear"></i></small></button>
                         </ul>
                     </div>
                 </nav>
@@ -115,32 +132,32 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="interrupteur-1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <div class="page-wrapper">
                             <div class="blog-top clearfix">
-                                <h4 class="pull-left">Actualités récentes</h4>
+                                <h4 class="pull-left"><a href="#" id="interrupteur-3"><u>Actualités récentes</u></a></h4>
                             </div><!-- end blog-top -->
 
                             <div class="blog-list clearfix">
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="tech-single.html" title="">
-                                                <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid">
+                                            <a href="Google pixel watch.html" title="">
+                                                <img src="upload/tech_blog_01_01.jpg" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div><!-- end media -->
                                     </div><!-- end col -->
 
                                     <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="tech-single.html" title="">Google Pixel Watch pose à côté de l'ancienne Galaxy Watch sur des photos divulguées</a></h4>
+                                        <h4><a href="Google pixel watch.html" title="">Google Pixel Watch pose à côté de l'ancienne Galaxy Watch sur des photos divulguées</a></h4>
                                         <p>Samsung a été le premier OEM à lancer Wear OS 3 pour les smartwatches l'année dernière, grâce à son partenariat avec Google dans le développement du nouveau système d'exploitation.</p>
                                         <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
-                                        <small><a href="tech-single.html" title="">25 avril 2022</a></small>
-                                        <small><a href="tech-author.html" title="">par Mihai Matei</a></small>
+                                        <small>25 avril 2022</small>
+                                        <small>par Mihai Matei</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
 
@@ -170,7 +187,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="tech-single.html" title="">
+                                            <a href="Le-Galaxy-A52.html" title="">
                                                 <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
@@ -178,13 +195,16 @@
                                     </div><!-- end col -->
 
                                     <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="tech-single.html" title="">Le Galaxy A52 commence à recevoir la mise à jour de sécurité d'avril 2022 en Europe</a></h4>
+                                        <h4><a href="Le-Galaxy-A52.html" title="">Le Galaxy A52 commence à recevoir la mise à jour de sécurité d'avril 2022 en Europe</a></h4>
                                         <p>Samsung a publié la mise à jour de sécurité d'avril 2022 sur divers smartphones et tablettes Galaxy au cours des dernières semaines. Après les téléphones haut...</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Micrologiciel</a></small>
-                                        <small><a href="tech-single.html" title="">27 avril 2022</a></small>
-                                        <small><a href="tech-author.html" title="">par Asif Shaik</a></small>
+                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-03.html" title="">Micrologiciel</a></small>
+                                        <small>27 avril 2022</small>
+                                        <small>par Asif Shaik</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
+                                <br>
+                                <br>
+                                <h2><a href="#" id="interrupteur-2">Page d'actualités en cours de construction</a></h2>
 
                                 <hr class="invis">
         </section>
@@ -192,7 +212,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="widget">
                             <div class="footer-text text-left">
                                 <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
@@ -213,7 +233,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br>
-                        <div class="copyright">&copy; blogTechnologie.</div>
+                        <div class="copyright" style="color: white">&copy; <small>blogTechnologie.</small></div>
                     </div>
                 </div>
             </div><!-- end container -->
@@ -229,6 +249,17 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            var section = document.querySelector("#interrupteur-1");
+            var h2= document.querySelector("#interrupteur-2");
+            var h4= document.querySelector("#interrupteur-3");
+            element.classList.toggle("dark-mode");
+            section.classList.toggle("dark-mode");
+            h2.classList.toggle("dark-mode");
+            h4.classList.toggle("dark-mode");
+         }</script>
 
 </body>
 </html>
