@@ -277,7 +277,7 @@ a:focus {
 .btn:hover,
 .btn:focus {
     color: #ffffff !important;
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 95, 2, 0.277) 0px, rgb(255, 73, 4) 100%) repeat scroll 0 0 !important
+    background: rgba(0, 0, 0, 0) linear-gradient(to left, rgba(255, 95, 2, 0.277) 0px, rgb(255, 58, 4) 100%) repeat scroll 0 0 !important
 }
 
 .tag-cloud-single span,

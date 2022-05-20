@@ -58,6 +58,25 @@
           background-color: black;
           color: white;
         }
+
+        .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
     </style>
 
 </head>
@@ -122,7 +141,13 @@
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="tech-single.html" title="">
-                                            <iframe width="800" height="400" src="https://www.youtube.com/embed/wla9d31b6d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <div class="video-container">
+                                                <iframe
+                                                  src="https://www.youtube.com/embed/wla9d31b6d8"
+                                                  frameborder="0"
+                                                  allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                                                  allowfullscreen></iframe>
+                                            </div>
                                             </div>
                                             <!-- end hover -->
                                         </a>
@@ -138,6 +163,23 @@
                                             </p>
                                         <small>27 janvier 2022</small>
                                         <small>par Steven</small>
+                                    </div><!-- end meta -->
+                                    <iframe
+                                    class="video"
+                                    src="https://www.youtube.com/embed/QPuU_2aTuEw"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                                    allowfullscreen></iframe>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="blog-meta big-meta text-center">
+                                        <h4>Quel MAC choisir en 2021/2022 ? Le GUIDE d'achat spécial MONTAGE VIDÉO !</h4>
+                                        <p>Les nouveaux Macbook Pro 14 et 16 pouces viennent d'être dévoilés. Découvrez tous les Mac dans sa vidéo guide d'achat, pour savoir lequel vous conviendra le mieux ? Et lequel est idéal pour le montage vidéo ?
+                                        </p>
+                                        <small>01 novembre 2021</small>
+                                        <small>par Nicorama - ex ARKO DRONE</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
                         </div>

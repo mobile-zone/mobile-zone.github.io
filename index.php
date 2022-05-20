@@ -1,3 +1,11 @@
+<?php
+
+include "configuration/manipulation.php";
+$articles = afficherArticle();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -56,6 +64,7 @@
         .dark-mode {
           background-color: black;
           color: white;
+          transition: 2000ms ease-in-out;
         }
     </style>
 
@@ -87,50 +96,42 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="tech-contact.html">Contactez-nous</a>
                             </li>
-                        </ul>
-                        <ul class="navbar-nav mr-2">
-                            <button onclick="myFunction()"><small><i class="fa fa-gear"></i></small></button>
-                        </ul>
+                            </ul>
+                           
+                            <a onclick="myFunction()"><small><i class="fa fa-gear"></i></small><span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="login.php"><small><i class="fa fa-users"></i></small><span class="sr-only">(current)</span></a>
+                           
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
         </header><!-- end market-header -->
-
+        
+      
         <section class="section first-section">
+        
             <div class="container-fluid">
-                <div class="masonry-blog clearfix">
-                    <div class="first-slot">
-                        <div class="masonry-box post-media">
-                             <img src="upload/tech_01.jpg" alt="" class="img-fluid">
-                             <div class="shadoweffect">
-                                <div class="shadow-desc">
-                                    <div class="blog-meta">
-                                        <span class="bg-orange"><a href="tech-category-03.html" title="">Micrologiciel</a></span>
-                                        <h4 style="font-size: 20px;"><a href="mise-a-jour-samsung-1.html" title="">Mise à jour Samsung One UI 4.1.1 : quand arrive-t-elle, à quoi s'attendre ?</a></h4>
-                                        <small>12 avril 2022</small>
-                                        <small>par Mihai Matei</small>
-                                    </div><!-- end meta -->
-                                </div><!-- end shadow-desc -->
-                            </div><!-- end shadow -->
-                        </div><!-- end post-media -->
-                    </div><!-- end first-side -->
 
-                    <div class="second-slot">
+                <div class="masonry-blog clearfix">
+                <?php $i = 0; foreach ($articles as $article){
+                $i++;
+                ?>
+                    <div class="first-slot">
+
                         <div class="masonry-box post-media">
-                             <img src="upload/tech_02.jpg" alt="" class="img-fluid">
+                             <img src="<?= $article->photo ?>" alt="" class="img-fluid" style= "height: 350px">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
-                                        <span class="bg-orange"><a href="tech-category-01.html" title="">Gadgets</a></span>
-                                        <h4><a href="Exclusif-la-Galaxy-Watch-5.html" title="">Exclusif : la Galaxy Watch 5 " Pro " avec une batterie monstre pourrait être en préparation !</a></h4>
-                                        <small>08 avril 2022</a></small>
-                                        <small>par Abhijet M</a></small>
+                                        <span class="bg-orange"><a href="" title=""><?= $article->categorie ?></a></span>
+                                        <h4 style="font-size: 20px;"><a href="" title=""><?= $article->titre ?></a></h4>
+                                        <small><?= $article->pubdate ?></a></small>
+                                        <small><?= $article->auteur ?></a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                              </div><!-- end shadow -->
                         </div><!-- end post-media -->
-                    </div><!-- end second-side -->
-            </div>
+                    </div><!-- end first-side -->        
+                    <?php if($i == 2) { break; } }?>        
         </section>
 
         <section class="section" id="interrupteur-1">
@@ -143,66 +144,8 @@
                             </div><!-- end blog-top -->
 
                             <div class="blog-list clearfix">
-                                <div class="blog-box row">
-                                    <div class="col-md-4">
-                                        <div class="post-media">
-                                            <a href="Google pixel watch.html" title="">
-                                                <img src="upload/tech_blog_01_01.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect"></div>
-                                            </a>
-                                        </div><!-- end media -->
-                                    </div><!-- end col -->
-
-                                    <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="Google pixel watch.html" title="">Google Pixel Watch pose à côté de l'ancienne Galaxy Watch sur des photos divulguées</a></h4>
-                                        <p>Samsung a été le premier OEM à lancer Wear OS 3 pour les smartwatches l'année dernière, grâce à son partenariat avec Google dans le développement du nouveau système d'exploitation.</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
-                                        <small>25 avril 2022</small>
-                                        <small>par Mihai Matei</small>
-                                    </div><!-- end meta -->
-                                </div><!-- end blog-box -->
-
+                           <?php include "Actualites_recentes.php"; ?>
                                 <hr class="invis">
-
-                                <div class="blog-box row">
-                                    <div class="col-md-4">
-                                        <div class="post-media">
-                                            <a href="tech-category-02.html" title="">
-                                                <img src="upload/tech_blog_02.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect"></div>
-                                            </a>
-                                        </div><!-- end media -->
-                                    </div><!-- end col -->
-
-                                    <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="tech-category-02.html" title="">TEST Macbook Pro M1 Max & M1 Pro - Lequel acheter ?</a></h4>
-                                        <p>Voici mon avis sur le MacBook Pro 14" 2021 (M1 Pro) et le 16" (M1 Max). Design, nouveautés, performances, comparatif, je vous explique les différences pour vous aider à choisir.</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-02.html" title="">Vidéos</a></small>
-                                        <small>27 janvier 2022</small>
-                                        <small>Par Steven</small>
-                                    </div><!-- end meta -->
-                                </div><!-- end blog-box -->
-
-                                <hr class="invis">
-
-                                <div class="blog-box row">
-                                    <div class="col-md-4">
-                                        <div class="post-media">
-                                            <a href="Le-Galaxy-A52.html" title="">
-                                                <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect"></div>
-                                            </a>
-                                        </div><!-- end media -->
-                                    </div><!-- end col -->
-
-                                    <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="Le-Galaxy-A52.html" title="">Le Galaxy A52 commence à recevoir la mise à jour de sécurité d'avril 2022 en Europe</a></h4>
-                                        <p>Samsung a publié la mise à jour de sécurité d'avril 2022 sur divers smartphones et tablettes Galaxy au cours des dernières semaines. Après les téléphones haut...</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-03.html" title="">Micrologiciel</a></small>
-                                        <small>27 avril 2022</small>
-                                        <small>par Asif Shaik</small>
-                                    </div><!-- end meta -->
-                                </div><!-- end blog-box -->
                                 <br>
                                 <br>
                                 <h2><a href="#" id="interrupteur-2">Page d'actualités en cours de construction</a></h2>

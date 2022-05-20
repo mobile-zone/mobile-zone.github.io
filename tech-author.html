@@ -45,20 +45,70 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        body {
-          padding: 25px;
-          background-color: white;
-          color: black;
-          font-size: 25px;
-        }
-        
-        .dark-mode {
-          background-color: black;
-          color: white;
-        }
-        </style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+[data-theme="light"] {
+--gradient-one: #30cfd0;
+--gradient-two: #330867;
+--bg-color: #ffffff;
+--links: #000000;
+}
+
+[data-theme="dark"] {
+--gradient-one: rgba(245, 107, 244, 0.79);
+--gradient-two: #efad05;
+--bg-color: #21232f;
+--links: #FFFFFF;
+}
+body {
+text-align: center;
+font-family: "Poppins", sans-serif;
+background-color: var(--bg-color);
+transition: 2000ms ease-in-out;
+}
+
+#wrapper{
+width: 100%;
+margin: auto;
+padding: 30px;
+}
+
+#wrapper h1 {
+
+transition: 2000ms ease-in-out;
+font-size: 20px;
+background: linear-gradient(
+to right,
+var(--gradient-one) 0%,
+var(--gradient-two) 100%
+);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#wrapper ul {
+padding: 0;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+
+#wrapper ul li {
+color: var(--links);
+cursor: pointer;
+}
+
+.dark-mode {
+transition: 2000ms ease-in-out;
+
+}
+
+</style>
 </head>
-<body>
+
+<body data-theme="dark">
    
     <div id="wrapper">
         <header class="tech-header header">
@@ -442,8 +492,10 @@
                                 <a class="nav-link" href="tech-contact.html">Contact Us</a>
                             </li>
                         </ul>
+                        <h1>Dark Mode</h1>
                         <ul class="navbar-nav mr-2">
-                            <button onclick="myFunction()"><small><i class="fa fa-gear"></i></small></button>
+                            <li data-mode="light">Light</li>
+                            <li data-mode="dark">Dark</li>
                         </ul>
                     </div>
                 </nav>
@@ -965,14 +1017,25 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-    function myFunction() {
-        var element = document.body;
-        var section = document.querySelector("#interrupteur-1");
-        var h4= document.querySelector("#interrupteur-2");
-        element.classList.toggle("dark-mode");
-        section.classList.toggle("dark-mode");
-        h4.classList.toggle("dark-mode");
-     }</script>
+
+    document.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', darkMode);
+});
+
+    function darkMode() {
+    let body = document.querySelector('body');
+    let mode = this.dataset.mode;
+    body.dataset.theme = mode;
+    var element = document.body;
+    var section = document.querySelector("#interrupteur-1");
+    var h2= document.querySelector("#interrupteur-2");
+    var h4= document.querySelector("#interrupteur-3");
+    element.classList.toggle("dark-mode");
+    section.classList.toggle("dark-mode");
+    h2.classList.toggle("dark-mode");
+    h4.classList.toggle("dark-mode");
+}
+    </script>
     
 </body>
 </html>
